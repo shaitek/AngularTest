@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="btn-container">
+    <div class="form-group search-input">
+      <input
+        type="text"
+        id="usr"
+        required
+        [(ngModel)]="search"
+        id="name"
+        placeholder="Search by ID/Title"
+      />
+      <button
+        type="button"
+        ngClass="margin-left-5px"
+        (click)="fetchPhotos()"
+        class="btn btn-success"
+      >
+        Submit
+      </button>
+    </div>
+    <div class="list-grid-view">
+      <button
+        [ngClass]="{ disabled: type == 'grid' }"
+        class="btn btn-primary"
+        (click)="type = 'grid'"
+      >
+        Grid View
+      </button>
+      <button
+        class="btn btn-primary margin-left-5px"
+        [ngClass]="{ disabled: type == 'list' }"
+        (click)="type = 'list'"
+      >
+        List View
+      </button>
+    </div>
+  </div>
+  <app-image [results]="results$ | async" [type]="type"> </app-image>
+</div>

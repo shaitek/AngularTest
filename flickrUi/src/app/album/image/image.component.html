@@ -1,0 +1,9 @@
+<div>
+  <ul [ngClass]="{'grid':type=='grid', 'list':type=='list'}">
+    <li *ngFor="let result of results">
+      <div>
+        <img src="{{result.media.m}}" />
+      </div>
+    </li>
+  </ul>
+</div>

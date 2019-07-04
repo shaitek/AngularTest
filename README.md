@@ -24,3 +24,7 @@ In dev mode project mode project will be run on http://localhost:4200
 3. Run `npm run test` to run test cases
 
 In prod mode project will be run on http://localhost:3000
+
+Deployed on AWS:
+
+http://angulartest-env.anithjhqdb.ap-south-1.elasticbeanstalk.com:3000/
